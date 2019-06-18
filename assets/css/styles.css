@@ -352,7 +352,12 @@ body {
     font-size: 100%;
   }
   .col {
-    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    width: 85%;
+    padding: 0 0 0 5%;
   }
 }
 
@@ -462,7 +467,7 @@ button:focus {
   display: flex;
   flex-wrap: nowrap;
   align-items: flex-start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 .row a {
   display: block;
@@ -476,24 +481,25 @@ button:focus {
   background-size: cover !important;
 }
 
-.row [id^="content"] {
+.padding15 {
+  padding-left: 5%;
+}
+
+.smallText {
   font-size: 1.5vw;
-  background: url("https://images.unsplash.com/photo-1550684656-96eda9e5c632?&w=1634")
-    center center;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: cover !important;
-  font-family: "Poppins", sans-serif;
 }
 
-[id^="content"] {
-  visibility: hidden;
-  opacity: 0;
-  transition: 1s ease-in-out;
-}
 
-[id^="contact"]:hover [id^="content"] {
-  visibility: visible;
+.animate_when_almost_visible {
+  -webkit-animation-duration: 0.6s;
+  -moz-animation-duration: 0.6s;
+  -o-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: scale(1);
   opacity: 1;
 }
