@@ -1,16 +1,14 @@
 var loadTime = 3000;
 var typeOpt = {
   strings: [
-    `<h1>hi I'm Akbar,</h1>
-a frontend developer and ui/ux designer who’s comfortable with the server-side.
-<h3>
+    `<p>hi I'm Akbar,</p>
+<h1>a frontend developer and ui/ux designer who’s comfortable with the server-side.</div>
 <div class="details">
 <a href="mailto:ahmadi.akbar.1996@gmail.com"><i class="far fa-envelope what-second-div animated bounceInRight" style="animation-delay:0.5s;"></i></a>
 <a href="https://github.com/ahmadi-akbar" target="_blank"><i class="fab fa-github what-second-div animated bounceInRight" style="animation-delay:0.7s;"></i></a>
 <a href="https://instagram.com/ahmadi__akbar" target="_blank"><i class="fab fa-instagram what-second-div BounceInRight animated bounceInRight" style="animation-delay:0.9s;"></i></a>
 <a href="https://t.me/ahmadi_akbar1" target="_blank"><i class="fab fa-telegram what-second-div BounceInRight animated bounceInRight" style="animation-delay:1.1s;"></i></a>
-</div>
-</h3>`
+</div>`
   ],
   typeSpeed: 20,
   smartBackspace: true,
@@ -28,14 +26,7 @@ var tabs = {
   3: "worksTab",
   4: "contactTab"
 };
-var activeTab = {
-  "font-size": "30px",
-  color: "pink"
-};
-var deactiveTab = {
-  "font-size": "25px",
-  color: "white"
-};
+
 function dots() {
   var int1 = setInterval(() => {
     var loading = $("#loadingText")[0];
@@ -59,8 +50,8 @@ $(document).ready(() => {
     updateURL: false, // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
     //beforeMove: function(index) {}, // This option accepts a callback function. The function will be called before the page moves.
     beforeMove: index => {
-      deactive();
-      $("#" + tabs[index]).css(activeTab);
+      $("#homeTab, #skillsTab, #worksTab, #contactTab").removeClass('navTabActive');
+      $("#" + tabs[index]).addClass('navTabActive');
     }, // This option accepts a callback function. The function will be called after the page moves.
     loop: false, // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
     keyboard: true, // You can activate the keyboard controls
@@ -69,20 +60,21 @@ $(document).ready(() => {
     // the browser's width is less than 600, the fallback will kick in.
     direction: "vertical" // You can now define the direction of the One Page Scroll animation. Options available are "vertical" and "horizontal". The default value is "vertical".
   });
-  $(".main").moveTo(1);
+  // go to first page
+  moveTo(1);
 });
 
-function showdes() {
+function showDes() {
   $("#web").css("display", "none");
-  $("#web-btn").css("border-bottom", "3px solid transparent");
-  $("#design").css("display", "inherit");
-  $("#des-btn").css("border-bottom", "3px solid #000");
+  $("#design").css("display", "flex");
+  $("#web-btn").removeClass("secTabActive");
+  $("#des-btn").addClass("secTabActive");
 }
-function showweb() {
-  $("#web").css("display", "inherit");
+function showWeb() {
+  $("#web").css("display", "flex");
   $("#design").css("display", "none");
-  $("#web-btn").css("border-bottom", "3px solid #000");
-  $("#des-btn").css("border-bottom", "3px solid transparent");
+  $("#web-btn").addClass("secTabActive");
+  $("#des-btn").removeClass("secTabActive");
 }
 
 setTimeout(function() {
@@ -96,6 +88,6 @@ setTimeout(function() {
   }, 1000);
 }, loadTime);
 
-function deactive() {
-  $("#homeTab, #skillsTab, #worksTab, #contactTab").css(deactiveTab);
+function moveTo(page){
+  $(".main").moveTo(page);
 }
