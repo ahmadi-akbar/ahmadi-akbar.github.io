@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="sidenav animated bounceInDown" style="animation-delay:4s;">
+    <div class="sidenav animated">
         <a id="homeTab" href="#" class="navTabActive" onclick="moveTo(1)">home</a>
         <a id="skillsTab" href="#" class="navTab" onclick="moveTo(2)">skills</a>
         <a id="worksTab" href="#" class="navTab" onclick="moveTo(3)">works</a>
@@ -40,89 +40,23 @@
                 <img src="">
             </div>
         </div>
-        <section id="home" class="padding">
+        <section id="homeSec" class="padding">
             <div id="tagline">
                 <b id="typePlace"></b>
             </div>
         </section>
-        <section id="skill" class="padding">
+        <section id="skillSec" class="padding">
             <div class="row" style="align-items: baseline">
                 <p>skills.</p>
                 <div class="row">
-                    <a href="#" id="web-btn" class="secTab secTabActive" onclick="showWeb()">web work.</a>
-                    <a href="#" id="des-btn" class="secTab" onclick="showDes()">ui/ux.</a>
+                    <a href="#" id="web-btn" class="secTab secTabActive" onclick="showWeb()">backend.</a>
+                    <a href="#" id="des-btn" class="secTab" onclick="showDes()">frontend.</a>
+                    <a href="#" id="des-btn" class="secTab" onclick="showDes()">languages.</a>
                 </div>
             </div>
-            <p>
-                <h2><i class="fas fa-code"></i> Frontend Development</h2>
-                <table>
-                    <tr>
-                        <td>HTML5</td>
-                        <td>CSS3</td>
-                        <td>JavaScript</td>
-                        <td>Jquery</td>
-                        <td>Bootstrap</td>
-                        <td>Vue</td>
-                    </tr>
-                </table>
-            </p>
-            <p>
-                <h2><i class="fas fa-server"></i> Backend Development</h2>
-                <table>
-                    <tr>
-                        <td>NodeJS</td>
-                        <td>PHP</td>
-                        <td>Firebase</td>
-                        <td>MongoDB</td>
-                    </tr>
-                </table>
-            </p>
-            <p>
-                <h2><i class="fas fa-tools"></i> Prototyping Tools</h2>
-                <table>
-                    <tr>
-                        <td>Adobe xD</td>
-                    </tr>
-                </table>
-            </p>
-            <p>
-                <h2><i class="fas fa-stream"></i> UX Methods</h2>
-                <table>
-                    <tr>
-                        <td>Persona</td>
-                    </tr>
-                </table>
-            </p>
-            <p>
-                <h2><i class="fas fa-ghost"></i></h2>
-                <table>
-                    <tr>
-                        <td>Dialogflow</td>
-                        <td>CorelDRAW</td>
-                        <td>3dsMax</td>
-                        <td>Unity</td>
-                        <td>Python</td>
-                        <td>C++</td>
-                    </tr>
-                </table>
-            </p>
-            <h2><i class="fas fa-chalkboard"></i> Learning</h2>
-            <table>
-                <tr>
-                    <td>Kubernetes</td>
-                    <td>Elixir</td>
-                </tr>
-            </table>
-            </p>
-            <p></p>
-            I develop fast interactive front-ends, using the latest technologies and techniques to reduce page load
-            time.<br>
-            Although I'm very familiar with using frameworks, my websites are primarily hand-coded using
-            HTML5,
-            CSS3, SVG & JavaScript.
-            <p></p>
+        
         </section>
-        <section id="work" class="padding">
+        <section id="workSec" class="padding">
             <div class="row" style="align-items: baseline">
                 <p>works.</p>
                 <div class="row">
@@ -201,7 +135,7 @@
             </div>
 
         </section>
-        <section id="secContact" class="padding">
+        <section id="contactSec" class="padding">
             <p style="text-align:center;">get in touch.</p>
             <div class="col">
                 <div class="row">

@@ -91,7 +91,7 @@ body {
   }
 }
 
-#home {
+#homeSec {
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -111,22 +111,6 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: cover !important;
-}
-
-#work h1 span {
-  margin: 10px 20px;
-  border-bottom: 4px solid transparent;
-  padding: 8px 0px;
-  transition: 0.4s ease-in-out;
-}
-#work h1 span:hover {
-  border-bottom: 4px solid #000;
-  cursor: pointer;
-}
-
-#skill table tr td {
-  padding: 8px 30px;
-  padding-left: 0px !important;
 }
 
 #web {
@@ -280,16 +264,7 @@ body {
     width: 98%;
     font-size: 29px;
   }
-  #skill {
-    text-align: left;
-  }
-  #skill table tr td {
-    padding: 8px 0px !important;
-    margin: 10px 0px;
-    margin-right: 12px;
-    display: inline-block;
-    font-size: 17px;
-  }
+  
   .details {
     text-align: center;
   }
@@ -299,11 +274,7 @@ body {
     padding: 14px;
     text-align: center;
   }
-  #work {
-    column-count: 1;
-    column-gap: 0%;
-    text-align: left;
-  }
+
   .project {
     width: 94%;
     padding: 15px 3% !important;
@@ -327,14 +298,9 @@ body {
     width: 100vw;
     padding: 15px 0px !important;
   }
-  #work h1 span {
-    font-size: 24px;
-  }
+
   #web {
     columns: 1;
-  }
-  #skill h2 {
-    font-size: 22px;
   }
   #typePlace {
     font-size: 50%;
@@ -421,6 +387,8 @@ button:focus {
   background-color: #0277bd;
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 20px;
+  animation-delay: 4s;
+  animation-name: bounceInDown;
 }
 
 /* The navigation menu links */
